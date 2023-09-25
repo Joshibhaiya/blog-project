@@ -32,6 +32,24 @@ static blog = async(req,res)=>{
         console.log(error)
     }
 }
+
+
+static contact = async(req,res)=>{
+    try{
+        res.render('contact')
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+
+static login = async(req,res)=>{
+    try{
+        res.render('login')
+    } catch (error) {
+        console.log(error)
+    }
+}
 }
 
     
