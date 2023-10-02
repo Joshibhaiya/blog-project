@@ -1,6 +1,9 @@
 const express = require ('express')
 const FrontController = require('../controllers/FrontController')
 const AdminController = require('../controllers/admin/AdminController')
+const BlogController = require('../controllers/admin/BlogController')
+const CategoryController = require('../controllers/admin/CategoryController')
+const AboutController = require('../controllers/admin/AboutController')
 const route = express.Router()
 
 
@@ -24,8 +27,18 @@ route.get('/login',FrontController.login)//static method
 // route.get('/admin/dashboard',AdminController.dashboard)
 route.get('/admin/dashboard',AdminController.dashboard)
 
+// admin/blogcontroller
+
+route.get('/admin/blog/display',BlogController.display)
 
 
+// categotry controller
+
+route.get('/admin/category/display',CategoryController.display)
+
+
+// about controller
+route.get('/admin/about/display',AboutController.display)
 
 
 module.exports =route
