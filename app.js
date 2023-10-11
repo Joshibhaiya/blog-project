@@ -3,11 +3,28 @@ const express = require('express')
 const app = express()
 const port = 3000
 const web =require('./routes/web')
-
+const connectDB = require('./db/connectdb')
+const { connection } = require('mongoose')
 
 
 // express engine link for 
 app.set('view engine', 'ejs')
+
+
+
+
+
+// data get
+app.use(express.urlencoded({extended:false}))
+
+
+
+
+
+// connectiondb
+connectDB()
+
+
 
 
 

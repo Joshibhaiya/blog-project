@@ -3,7 +3,7 @@ class AboutController{
         try {
             res.render('admin/about/display')
         } catch (error) {
-          console.console.log(error);  
+          console.log(error);  
         }
     }
 }
