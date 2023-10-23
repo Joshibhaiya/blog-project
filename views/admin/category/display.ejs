@@ -10,7 +10,7 @@
           <div class="dash-right">
             <div class="dash-header">
               <div class="dash-title">
-                <h1>Blogs</h1>
+                <h1>Category</h1>
               </div>
               <div class="dash-nav">
                 <button
@@ -19,7 +19,7 @@
                   data-toggle="modal"
                   data-target="#exampleModal"
                 >
-                  ADD blog
+                  ADD Category
                 </button>
               </div>
             </div>
@@ -29,6 +29,17 @@
                 <th>Cname</th>
                 <th>Action</th>
               </tr>
+              <% d.forEach((item)=>{%>
+                <tr>
+                  <td><%= item._id %></td>
+                  <td><%= item.cname %></td>
+                  <td>
+                    <a href="/categoryview/<%= item._id %>" class="btn btn-info">view</a>
+                    <a href="/categoryEdit/<%= item._id %>" class="btn btn-success">edit</a>
+                    <a href="/categoryDelete/<%= item._id %>" class="btn btn-danger">delete</a>
+                  </td>
+                </tr>
+              <%})%>
             </table>
           </div>
         </div>
@@ -49,7 +60,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">ADD Category</h5>
         <button
           type="button"
           class="close"
@@ -59,11 +70,11 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">...</div>
+      <div class="modal-body"></div>
       <form action="/categoryinsert" method="post">
         <div class="form-group">
           <label for="">Category name</label>
-          <input type="text" name="cname" class="form-control">
+          <input type="text" name="categoryname" class="form-control">
         <button type="submit" class="btn btn-info">submit</button>
       </form>
     </div>

@@ -1,3 +1,4 @@
+const CategoryModel = require('../../models/Category')
 class BlogController{
     static display = async(req,res)=>{
         try {

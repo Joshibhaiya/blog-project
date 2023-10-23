@@ -37,6 +37,10 @@ route.get('/admin/blog/display',BlogController.display)
 route.get('/admin/category/display',CategoryController.display)
 
 route.post('/categoryinsert',CategoryController.categoryinsert)
+route.get('/categoryview/:id',CategoryController.categoryview)
+route.get('/categoryEdit/:id',CategoryController.categoryedit)
+route.post('/categoryupdate/:id',CategoryController.categoryupdate)
+route.get('/categoryDelete/:id',CategoryController.categorydelete)
 
 // about controller
 route.get('/admin/about/display',AboutController.display)

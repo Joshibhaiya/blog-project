@@ -50,7 +50,7 @@ static login = async(req,res)=>{
         console.log(error)
     }
 }
-}
+} 
 
     
 

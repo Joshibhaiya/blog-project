@@ -1,0 +1,65 @@
+<%- include('../../header.ejs') %>
+    <section class="dashboard-wrap mtb-40">
+        <div class="container">
+            <div class="body-content">
+                <div class="row">
+                    <div class="col-md-3">
+                        <%- include('../sidebar.ejs') %>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="dash-right">
+                            <div class="dash-header">
+                                <div class="dash-title">
+                                    <h1>Category View</h1>
+                                </div>
+                                <div class="dash-nav">
+                                    <!-- Button trigger modal -->
+                                    <!-- <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#exampleModal">
+                                        Add Category
+                                    </button> -->
+
+                                </div>
+                            </div>
+                            <table class="table table-bordered table-striped">
+                                <tr>
+                                    <th>#ID</th>
+                                    <th>Cname</th>
+                                </tr>                                
+                                    <tr>
+                                        <td><%= d._id %></td>
+                                        <td><%= d.cname %></td>                                                             
+                                    </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!------- Blog Modal -------->
+    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add Category</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="/categoryinsert" method="post">
+                        <div class="form-group">
+                            <label for="">Category Name</label>
+                            <input type="text" name="categoryname" class="form-control">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-info">Submit</button>
+                    </form>
+                </div>
+            </div>
+              
+        </div>
+    </div> -->
+    <%- include('../../footer.ejs') %>
