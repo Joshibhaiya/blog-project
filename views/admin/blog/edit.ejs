@@ -1,0 +1,62 @@
+<%- include('../../header.ejs') %>
+<section class="dashboard-wrap mtb-40">
+  <div class="container">
+    <div class="body-content">
+      <div class="row">
+        <div class="col-md-3"><%- include('../sidebar.ejs') %></div>
+        <div class="col-md-9">
+          <div class="dash-right">
+            <div class="dash-header">
+              <div class="dash-title">
+                <h1>Category Edit</h1>
+              </div>
+              <div class="dash-nav">
+                <!-- Button trigger modal -->
+                <!-- <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#exampleModal">
+                                        Add Category
+                                    </button> -->
+              </div>
+            </div>
+            <!---------- edit form start ------>
+            <form action="/blogupdate/<%= d._id %>" method="post" enctype="multipart/form-data">
+              <div class="form-group">
+                <label for="">Category Name</label>
+                <input
+                  type="text"
+                  name="categoryname"
+                  class="form-control"
+                  value="<%= d.cname %>"
+                />
+                <label for="">Title</label>
+                <input
+                  type="text"
+                  name="title"
+                  class="form-control"
+                  value="<%= d.title %>"
+                />
+                <label for="">Description</label>
+                <textarea
+                  name="description"
+                  id=""
+                  cols="30"
+                  rows="10"
+                  class="form-control"
+                >
+<%= d.description %></textarea
+                >
+                <label for="">Image</label>
+                <input type="file" name="image" class="form-control">
+                <img src="<%= d.image.url %>" alt="" width="100px">
+              </div>
+
+              <button type="submit" class="btn btn-info">UP DATE</button>
+            </form>
+            <!---------- edit form end ------>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<%- include('../../footer.ejs') %>

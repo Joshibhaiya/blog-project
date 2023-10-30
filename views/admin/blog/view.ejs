@@ -1,0 +1,43 @@
+<%- include('../../header.ejs') %>
+<section class="dashboard-wrap mtb-40">
+  <div class="container">
+    <div class="body-content">
+      <div class="row">
+        <div class="col-md-3"><%- include('../sidebar.ejs') %></div>
+        <div class="col-md-9">
+          <div class="dash-right">
+            <div class="dash-header">
+              <div class="dash-title">
+                <h1>Blog View</h1>
+              </div>
+              <div class="dash-nav">
+                <!-- Button trigger modal -->
+                <!-- <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    data-target="#exampleModal">
+                                    Add Category
+                                </button> -->
+              </div>
+            </div>
+            <table class="table table-bordered table-striped">
+              <tr>
+                <th>#ID</th>
+                <th>Cname</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Image</th>
+              </tr>
+              <tr>
+                <td><%= d._id %></td>
+                <td><%= d.cname %></td>
+                <td><%= d.title %></td>
+                <td><%= d.description %></td>
+                <td><img src="<%= d.image.url %>" alt=""></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<%- include('../../footer.ejs') %>

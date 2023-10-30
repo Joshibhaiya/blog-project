@@ -30,12 +30,17 @@ route.get('/admin/dashboard',AdminController.dashboard)
 // admin/blogcontroller
 
 route.get('/admin/blog/display',BlogController.display)
+route.post('/bloginsert',BlogController.bloginsert)
+route.get('/blogview/:id',BlogController.bolgview)
+route.get('/blogEdit/:id',BlogController.blogedit)
+route.post('/blogupdate/:id',BlogController.blogupdate)
+route.get('/blogDelete/:id',BlogController.blogdelete)
+
 
 
 // categotry controller
 
 route.get('/admin/category/display',CategoryController.display)
-
 route.post('/categoryinsert',CategoryController.categoryinsert)
 route.get('/categoryview/:id',CategoryController.categoryview)
 route.get('/categoryEdit/:id',CategoryController.categoryedit)
